@@ -1,20 +1,53 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Provider as PaperProvider } from "react-native-paper";
+import { Provider } from "react-redux";
+import store from "./src/redux/store";
+import BudgetEntry from "./src/screens/BudgetEntry";
+import BudgetList from "./src/screens/BudgetList";
+import { FontAwesome } from "@expo/vector-icons";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <NavigationContainer>
+        <PaperProvider>
+          <Stack.Navigator initialRouteName="BudgetEntry">
+            <Stack.Screen
+              name="BudgetEntry"
+              component={BudgetEntry}
+              options={{
+                title: "Budget Entry",
+                headerLeft: () => (
+                  <FontAwesome
+                    style={{ margin: 10, color: "brown" }}
+                    name="book"
+                    size={28}
+                    color="black"
+                  />
+                ),
+              }}
+            />
+            <Stack.Screen
+              name="BudgetList"
+              component={BudgetList}
+              options={{
+                title: "Budget Entry Listing",
+                headerLeft: () => (
+                  <FontAwesome
+                    style={{ margin: 10, color: "brown" }}
+                    name="book"
+                    size={28}
+                    color="black"
+                  />
+                ),
+              }}
+            />
+          </Stack.Navigator>
+        </PaperProvider>
+      </NavigationContainer>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
