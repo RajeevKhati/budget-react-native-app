@@ -24,15 +24,18 @@
 
 ### Budget Entry Screen
 
-![BudgetEntryScreen](/AppScreenshots/BudgetEntryScreen.jpg)
+<img src="AppScreenshots/BudgetEntryScreen.jpg" width="300">
 
 ### Empty Form Submission
-![BudgetEntryScreenEmptyFormSubmit](/AppScreenshots/BudgetEntryScreenEmptyFormSubmit.jpg)
+
+<img src="AppScreenshots/BudgetEntryScreenEmptyFormSubmit.jpg" width="300">
 
 ### Form with values
-![BudgetEntryScreenWithValues](/AppScreenshots/BudgetEntryScreenWithValues.jpg)
+
+<img src="AppScreenshots/BudgetEntryScreenWithValues.jpg" width="300">
 
 ### Budget List screen
-![BudgetListScreen](/AppScreenshots/BudgetListScreen.jpg)
+
+<img src="AppScreenshots/BudgetListScreen.jpg" width="300">
 
 
